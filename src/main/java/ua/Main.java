@@ -44,61 +44,6 @@ public class Main {
             }
         }
     }
-//         Dish dish = selectDish(sc);
-//        System.out.println(dish);
-
-//        em.getTransaction().begin();
-//
-//        try{
-//            em.persist(menu);
-//            em.getTransaction().commit();
-//        }catch (Exception ex){
-//            em.getTransaction().rollback();
-//        }
-//        try {
-//            Query query = em.createNamedQuery("discount", Dish.class);
-//            List<Dish> listDiscount = query.getResultList();
-//            for (Dish d : listDiscount) {
-//                System.out.println(d);
-//            }
-//
-//        }catch (NoResultException ex){
-//            System.out.println("no result found!");
-//            return;
-//        }catch (NonUniqueResultException ex){
-//            System.out.println("non unique result!");
-//            return;
-//        }
-//        System.out.println("-------------------------------------------------------");
-//        System.out.println("FROM TO");
-//        try {
-//            Query query = em.createNamedQuery("fromTo", Dish.class);
-//            query.setParameter("from", 200);
-//            query.setParameter("to", 500);
-//            List<Dish> dishList = query.getResultList();
-//            for (Dish d : dishList) {
-//                System.out.println(d);
-//            }
-//        }catch (NoResultException ex){
-//            System.out.println("no result!");
-//        }catch (NonUniqueResultException ex){
-//            System.out.println("non unique result!");
-//        }
-//        System.out.println("-------------------------add dish 1 kg------------------------------");
-//        Menu order = new Menu("order");
-//        order.addDishKg(new Dish("fish", 330, 330, 10));
-//        order.addDishKg(new Dish("soup", 300, 300, 10));
-//        order.addDishKg(new Dish("pelmen", 400, 400, 10));
-//        em.getTransaction().begin();
-//        try{
-//            em.persist(order);
-//            em.getTransaction().commit();
-//        }catch (Exception ex){
-//            em.getTransaction().rollback();
-//        }
-//        em.close();
-//        emf.close();
-//    }
 
     private static void initTable() {
         emf = Persistence.createEntityManagerFactory("JPAMenu");
